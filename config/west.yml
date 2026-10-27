@@ -2,20 +2,22 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: dev8am
+      url-base: https://github.com/dev8am
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3
+      remote: dev8am
+      revision: studio-ble-fix
       import: app/west.yml
     - name: zmk-component-bmp-boost
       remote: sekigon-gonnoc
       import: west.yml
       revision: v0.2
     - name: zmk-feature-status-led
-      remote: sekigon-gonnoc
-      revision: main
+      remote: dev8am
+      revision: fix/serialize-led-patterns
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc
       revision: torabo-tsuki
