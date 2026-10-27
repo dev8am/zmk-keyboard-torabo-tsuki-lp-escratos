@@ -1,5 +1,8 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+# A push to a branch with an open PR fires both `push` and the PR's
+# `synchronize`, which builds the same commit twice. Keep `push` only, so
+# branches without a PR still produce firmware artifacts.
+on: [push, workflow_dispatch]
 
 jobs:
   build:
