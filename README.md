@@ -25,7 +25,7 @@
 
 ## 書き込み方
 
-1. このリポジトリの Actions タブで最新のビルドを開き、`firmware` をダウンロードして展開します（ダウンロードには GitHub へのログインが必要です）
+1. [Releases](https://github.com/dev8am/zmk-keyboard-torabo-tsuki-lp-escratos/releases/latest) から、使う uf2 ファイルをダウンロードします
 2. 名前に `_central` が付いている uf2 をトラックボールがある側に、`_peripheral` が付いている uf2 を反対側に書き込みます
 
 | トラックボールの位置 | トラックボール側 | 反対側 |
@@ -36,7 +36,9 @@
 
 2 台を使い分ける場合は、1 台ずつ、もう 1 台の電源を切った状態で左右をペアリングしてください。理由は [docs/CHANGES.md](docs/CHANGES.md#2台を見分ける) にあります。
 
-うまく動かなくなったときは `settings_reset` を書き込んでから、もう一度ファームウェアを書き込みます。
+うまく動かなくなったときは、同じ Releases にある `settings_reset` を書き込んでから、もう一度ファームウェアを書き込みます。
+
+リリース前の最新の変更を試したい場合は、[Actions](https://github.com/dev8am/zmk-keyboard-torabo-tsuki-lp-escratos/actions) の最新のビルドから `firmware` をダウンロードすることもできます（GitHub へのログインが必要です）。
 
 ## キーマップの編集
 
