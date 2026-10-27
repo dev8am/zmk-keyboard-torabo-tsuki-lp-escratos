@@ -7,6 +7,16 @@
 
 &pointing_listener {
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+
+    // Layer 3 is the mouse layer, so roll the ball to scroll there. A layer
+    // override replaces the base processors rather than adding to them, so
+    // leaving zip_xy_transform out is what flips the scroll direction relative
+    // to cursor movement. Add it back to scroll the same way the cursor moves.
+    scroll_layer {
+        layers = <3>;
+        input-processors = <&zip_xy_to_scroll_mapper>,
+                           <&zip_scroll_scaler 1 8>;
+    };
 };
 
 &size_s_transform {
