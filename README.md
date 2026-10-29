@@ -1,5 +1,9 @@
 # torabo-tsuki LP（S サイズ）用 ZMK ファームウェア — Escratos 対応版
 
+> [!WARNING]
+> これは個人が趣味で作っている非公式のファームウェアです。書き込みや使用は自己責任でお願いします。
+> このファームウェアを使ったことでキーボードやパソコンが故障した場合も、その他どのような損害が生じた場合も、作者は一切の責任を負いません。
+
 [torabo-tsuki LP](https://github.com/sekigon-gonnoc/torabo-tsuki-lp) の S サイズ（44 キー）向けの ZMK ファームウェアです。
 本家 [sekigon-gonnoc/zmk-keyboard-torabo-tsuki-lp](https://github.com/sekigon-gonnoc/zmk-keyboard-torabo-tsuki-lp) をもとに、キーマップ編集用の Web アプリ [Escratos](https://dev8am.github.io/escratos/) から **Bluetooth 経由で** キーマップを編集できるようにしています（USB でも編集できます）。
 
@@ -43,7 +47,7 @@
 ## キーマップの編集
 
 * **Escratos**: Chrome または Edge で https://dev8am.github.io/escratos/ を開き、Bluetooth または USB で接続します
-* **ZMK Studio**: https://zmk.studio からも同じように接続できます
+* **ZMK Studio**: https://zmk.studio からも同じように接続できますが、ZMK Studio での動作確認はしていません
 
 ロック解除の操作は不要です（`CONFIG_ZMK_STUDIO_LOCKING=n`）。接続できるのはトラックボールがある側（central）だけです。
 

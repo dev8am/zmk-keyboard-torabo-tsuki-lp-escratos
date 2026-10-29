@@ -114,6 +114,8 @@ ZMK は `ZMK_BLE` 配下で `BT_DEVICE_NAME_DYNAMIC` を imply するため、Ze
 1. Chrome または Edge で https://zmk.studio を開く（Safari は Web Bluetooth 非対応）
 2. Connect → Bluetooth → キーボードを選択
 
+この手順で接続はできますが、ZMK Studio での動作確認はしていません。
+
 `CONFIG_ZMK_STUDIO_LOCKING=n` のためロック解除操作は不要です。Studio が接続できるのは central 側だけです（`select ZMK_STUDIO_RPC if !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL`）。
 
 `revision` がブランチ指定なので、ZMK コアは fork の更新に追随します。固定したい場合はコミット SHA を指定してください。
